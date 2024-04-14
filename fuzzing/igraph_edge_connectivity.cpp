@@ -1,5 +1,6 @@
 #include <igraph.h>
 #include <cstdlib>
+// igraph_create参数不匹配
 
 extern "C" int LLVMFuzzerTestOneInput(const uint8_t *Data, size_t Size)
 {
@@ -25,6 +26,7 @@ extern "C" int LLVMFuzzerTestOneInput(const uint8_t *Data, size_t Size)
     }
 
     // Create a graph from the edges
+    // igraph_create参数不匹配
     err = igraph_create(&graph, &edges, 0, IGRAPH_UNDIRECTED);
 
     if (err == IGRAPH_SUCCESS)
