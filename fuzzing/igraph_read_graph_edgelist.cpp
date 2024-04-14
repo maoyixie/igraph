@@ -1,5 +1,6 @@
 #include <igraph.h>
 #include <cstdio>
+// igraph_read_graph_edgelist参数不匹配
 
 extern "C" int LLVMFuzzerTestOneInput(const uint8_t *Data, size_t Size)
 {
@@ -22,6 +23,7 @@ extern "C" int LLVMFuzzerTestOneInput(const uint8_t *Data, size_t Size)
     rewind(f);
 
     // Call the function to be fuzzed with the temporary file
+    // igraph_read_graph_edgelist参数不匹配
     igraph_read_graph_edgelist(&graph, f, n, directed);
 
     // Close and remove the temporary file
