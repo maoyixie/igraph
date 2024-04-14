@@ -1,5 +1,10 @@
 #include <igraph.h>
 #include <cstdio>
+/* ./fuzzing/igraph_read_graph_lgl.cpp:23:23: error: assigning to 'igraph_add_weights_t' from incompatible type 'int'
+    weights = Data[2] % 3;
+              ~~~~~~~~^~~
+1 error generated.
+ERROR:__main__:Building fuzzers failed. */
 
 extern "C" int LLVMFuzzerTestOneInput(const uint8_t *Data, size_t Size)
 {
