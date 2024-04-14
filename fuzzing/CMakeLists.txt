@@ -31,7 +31,7 @@ add_fuzzer(write_all_graphml)
 #add
 add_fuzzer(igraph_all_minimal_st_separators)
 # add_fuzzer(igraph_edge_connectivity)
-add_fuzzer(igraph_minimum_size_separators)
+# add_fuzzer(igraph_minimum_size_separators)
 add_fuzzer(igraph_read_graph_dl)
 # add_fuzzer(igraph_read_graph_edgelist)
 add_fuzzer(igraph_read_graph_gml)

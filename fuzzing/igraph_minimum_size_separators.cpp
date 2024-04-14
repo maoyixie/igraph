@@ -1,5 +1,6 @@
 #include <igraph.h>
 #include <cstdlib>
+// igraph_read_graph_edgelist参数不匹配
 
 extern "C" int LLVMFuzzerTestOneInput(const uint8_t *Data, size_t Size)
 {
@@ -11,6 +12,7 @@ extern "C" int LLVMFuzzerTestOneInput(const uint8_t *Data, size_t Size)
     igraph_i_set_attribute_table(&igraph_cattribute_table);
 
     // Create a graph from the input data
+    // igraph_read_graph_edgelist参数不匹配
     err = igraph_read_graph_edgelist(&graph, Data, Size / 2, 0);
     if (err != IGRAPH_SUCCESS)
     {
