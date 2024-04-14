@@ -1,7 +1,7 @@
 #include <igraph.h>
 #include <cstdio>
 
-extern int LLVMFuzzerTestOneInput(const uint8_t *Data, size_t Size)
+extern "C" int LLVMFuzzerTestOneInput(const uint8_t *Data, size_t Size)
 {
     // Create a temporary file and write the Data into it
     FILE *temp_file = tmpfile();

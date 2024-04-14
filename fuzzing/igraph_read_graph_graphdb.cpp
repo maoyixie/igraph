@@ -1,7 +1,7 @@
 #include <igraph.h>
 #include <cstdio>
 
-extern int LLVMFuzzerTestOneInput(const uint8_t *Data, size_t Size)
+extern "C" int LLVMFuzzerTestOneInput(const uint8_t *Data, size_t Size)
 {
     // Create a temporary file from the fuzz input data
     char filename[] = "/tmp/fuzzXXXXXX";
