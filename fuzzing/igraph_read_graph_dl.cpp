@@ -8,7 +8,7 @@ extern "C" int LLVMFuzzerTestOneInput(const uint8_t *Data, size_t Size)
         return 0;
     }
 
-    FILE *instream = fmemopen((void *)Data, Size, "rb");
+    FILE *instream = fmemopen((void *)Data, Size, "rb"); // error in input
     if (!instream)
     {
         return 0;
@@ -18,7 +18,7 @@ extern "C" int LLVMFuzzerTestOneInput(const uint8_t *Data, size_t Size)
     igraph_empty(&graph, 0, IGRAPH_UNDIRECTED);
 
     igraph_bool_t directed = Data[0] % 2;
-    igraph_error_t err = igraph_read_graph_dl(&graph, instream, directed);
+    igraph_error_t err = igraph_read_graph_dl(&graph, instream, directed); // parse error => instream
 
     if (err == IGRAPH_SUCCESS)
     {
