@@ -5,6 +5,7 @@
 ### Fixed
 
  - `igraph_community_label_propagation()` is now interruptible.
+ - `igraph_is_bipartite()` would on rare occasions return invalid results when the cache was employed.
 
 ### Other
 
@@ -15,6 +16,7 @@
 ### Added
 
  - `igraph_is_complete()` checks whether there is a connection between all pairs of vertices (experimental function, contributed by Aymeric Agon-Rambosson @aagon in #2510).
+ - `igraph_join()` creates the _join_ of two graphs (experimental function, contributed by Quinn Buratynski @GanzuraTheConsumer in #2508).
 
 ### Fixed
 
